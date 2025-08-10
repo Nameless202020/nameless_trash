@@ -1,6 +1,6 @@
 # nameless_trash
 一個奇怪的資料包，由無名の肝帝製作
-
+\n
 ----功能介紹----
 由/function nameless:某資料夾\start來開啟某項功能
 由/function nameless:某資料夾\stop來關閉
