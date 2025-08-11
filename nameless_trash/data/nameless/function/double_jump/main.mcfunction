@@ -1,8 +1,8 @@
-execute as @a at @s if block ~ ~-0.5 ~ air if entity @s[predicate=nameless:is_sneaking,scores={sneaking_time=..60}] run scoreboard players add @s sneaking_time 1
+execute as @a at @s if block ~ ~-0.5 ~ air if entity @s[predicate=nameless:is_sneaking] run scoreboard players add @s sneaking_time 1
 # 滯空效果（當潛行時）
-execute as @a at @s if entity @s[predicate=nameless:is_sneaking,scores={sneaking_time=..60}] run summon marker ~ ~ ~ {"Tags":["double_jump"]}
-execute as @a at @e[tag=double_jump,sort=nearest] if entity @s[predicate=nameless:is_sneaking,scores={sneaking_time=..60}] run tp @s @s
-
+execute as @a at @s if entity @s[predicate=nameless:is_sneaking,scores={sneaking_time=1..60}] run summon marker ~ ~ ~ {"Tags":["double_jump"]}
+execute as @a at @e[tag=double_jump,sort=nearest] if entity @s[predicate=nameless:is_sneaking,scores={sneaking_time=1..60}] run tp @s @s
+execute at @a as @e[tag=double_jump,distance=2..] run kill @s
 # 跳躍效果（當停止潛行時）
 execute as @a at @s if entity @s[predicate=!nameless:is_sneaking,scores={sneaking_time=1..60}] run effect give @s levitation 1 2 true
 
